@@ -1,7 +1,9 @@
-document.querySelector('#load-btn').addEventListener('click', function(){
+document.querySelector('#load-btn').addEventListener('click', async function(){
     
-    axios.get('contact.txt').then(function(response){
+    await axios.get('contact.txt').then(function(response){
         document.querySelector('#content').innerHTML = response.data;
     })
 })
+
+
 
