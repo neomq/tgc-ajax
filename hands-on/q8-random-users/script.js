@@ -12,8 +12,10 @@ document.querySelector("#btn").addEventListener('click', async function(){
             let userName = user.name.first + " " + user.name.last;
             let userCity = user.location.city;
 
+            // Add to div #display
+            // name & city
             randUsersList.innerHTML += `<p>Name: ${userName}<br>City: ${userCity}</p>`;
-
+            //image
             let userImg = user.picture.medium;
             randUsersList.innerHTML += `<img src="${userImg}" alt="">`;
 
