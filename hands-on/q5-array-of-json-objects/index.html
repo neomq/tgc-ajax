@@ -3,16 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
   <body>
-    <button id="load-users-btn">Load Users</button>
 
-    <div id="all-users">
-      <ol id="users"></ol>
+    <div class="row g-3 col-6 p-4">
+      <div class="col-auto">
+        <button id="load-users" class="btn btn-outline-primary">Load Users</button>
+      </div>       
+      <div class="col-auto">
+        <label class="visually-hidden">userID</label>
+        <input id="search-input" class="form-control">
+      </div>
+      <div class="col-auto">
+        <button id="search-btn" type="submit" class="btn btn-primary">Search</button>
+      </div>
+    </div>
+  
+
+    <div id="all-users" class="col-4 p-4">
+      <ol id="all-users-list" class=" col-auto list-group list-group-numbered">
+
+      </ol>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
     <script src="script.js"></script>
   </body>
